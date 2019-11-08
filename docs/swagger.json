@@ -1,0 +1,16 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Implementation of inDriver test task.",
+        "title": "inDriver test task",
+        "contact": {
+            "name": "Grigoriy Pashukhin",
+            "url": "https://github.com/pashukhin"
+        },
+        "license": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {}
+}
