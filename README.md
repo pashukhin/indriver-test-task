@@ -1,6 +1,6 @@
 # inDriwer test task
 
-(Original googledock)[https://docs.google.com/document/d/1QNWc1Ijc-Xr0bi7Ngcg0CLp-D3_V9kLbj9piuibUhIA/edit]
+(Original googledoc)[https://docs.google.com/document/d/1QNWc1Ijc-Xr0bi7Ngcg0CLp-D3_V9kLbj9piuibUhIA/edit]
 
 ## Actual task
 
@@ -27,6 +27,14 @@
 - https://github.com/swaggo/swag
 - https://github.com/swaggo/gin-swagger
 - https://github.com/jinzhu/gorm
+
+## How to run
+
+- `docker-compose up`
+
+## Docs
+
+http://localhost:8080/swagger/index.html
 
 ### Working plan
 
