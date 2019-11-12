@@ -12,12 +12,14 @@ definitions:
   model.CarModel:
     properties:
       mark:
+        example: Lada
         type: string
-      model:
+      name:
+        example: Kalina
         type: string
     required:
     - mark
-    - model
+    - name
     type: object
 host: localhost:8080
 info:
@@ -33,7 +35,7 @@ paths:
     get:
       consumes:
       - application/json
-      description: get car modles
+      description: get car models
       produces:
       - application/json
       responses:
@@ -56,6 +58,142 @@ paths:
           schema:
             $ref: '#/definitions/httputil.HTTPError'
       summary: List car models
+      tags:
+      - car_model
+    post:
+      consumes:
+      - application/json
+      description: create car model
+      parameters:
+      - description: Car model
+        in: body
+        name: account
+        required: true
+        schema:
+          $ref: '#/definitions/model.CarModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CarModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Create car model
+      tags:
+      - car_model
+  /car_model/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: delete car modles
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CarModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Delete car model
+      tags:
+      - car_model
+    get:
+      consumes:
+      - application/json
+      description: get car model
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CarModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get car model
+      tags:
+      - car_model
+    put:
+      consumes:
+      - application/json
+      description: update car modles
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Car model
+        in: body
+        name: account
+        required: true
+        schema:
+          $ref: '#/definitions/model.CarModel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CarModel'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Update car model
       tags:
       - car_model
 swagger: "2.0"

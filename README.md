@@ -1,6 +1,6 @@
 # inDriwer test task
 
-(Original googledoc)[https://docs.google.com/document/d/1QNWc1Ijc-Xr0bi7Ngcg0CLp-D3_V9kLbj9piuibUhIA/edit]
+Original googledoc at https://docs.google.com/document/d/1QNWc1Ijc-Xr0bi7Ngcg0CLp-D3_V9kLbj9piuibUhIA/edit
 
 ## Actual task
 

@@ -1,7 +1,12 @@
 package model
 
+import (
+	"github.com/jinzhu/gorm"
+)
+
 // CarModel is car model
 type CarModel struct {
-	Mark  string `form:"mark" json:"mark" binding:"required"`
-	Model string `form:"model" json:"model" binding:"required"`
+	gorm.Model
+	Mark string `form:"mark" json:"mark" binding:"required" example:"Lada"`
+	Name string `form:"name" json:"name" binding:"required" example:"Kalina"`
 }
